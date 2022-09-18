@@ -66,7 +66,7 @@ function PostComment({ refId }) {
       },
     });
     const data = await response.json();
-
+    setComment("")
     fetchComments();
   };
   return (
@@ -93,16 +93,16 @@ function PostComment({ refId }) {
           </Item>
         </Grid>
         <Grid xs={2}>
-           {
+          {
             CommentBtn 
             ?  <Button  size="small" onClick={submitComment} variant="contained">Comment</Button> 
             : ""
-           } 
-           {
+          } 
+          {
             LoginBtn 
             ? <Link href={`/login`} passHref><Button  size="small" onClick={submitComment} variant="contained">Login</Button>  </Link>
             : ""
-           } 
+          } 
           
           {/* <Item>
           </Item> */}

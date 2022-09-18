@@ -23,7 +23,7 @@ function PostList({posts}){
 export default PostList;
 
 export async function getServerSideProps(){
-    const response = await fetch('http://127.0.0.1:8000/api/all_post')
+    const response = await fetch('http://127.0.0.1:8000/api/all_post/0/4')
     const data = await response.json()
     return {
         props:{
